@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="animation_generators">
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.SideToSideAnimator</item>
+    </string-array>
+
+    <string-array name="material_colours">
+        <item>#9575CD</item>
+        <item>#64B5F6</item>
+        <item>#AED581</item>
+        <item>#FFD54F</item>
+        <item>#F06292</item>
+    </string-array>
+</resources>

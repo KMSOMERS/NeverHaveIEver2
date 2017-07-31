@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Never Have I Ever</string>
+
+    <string name="category_sex_and_relationships">Sex and Relationships</string>
+    <string name="category_drinking">Drinking</string>
+    <string name="category_animals">Animals</string>
+    <string name="category_family">Family</string>
+    <string name="category_random">Random</string>
+
+    <string name="question_next">Next question</string>
+    <string name="question_previous">Previous question</string>
+    <string name="quit">Quit</string>
+
+</resources>
