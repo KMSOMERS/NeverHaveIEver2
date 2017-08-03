@@ -9,16 +9,14 @@ import java.util.List;
 
 public class QuestionsModel {
 
-    public List<String> getQuestions(String category){
-        List<String> questions = new ArrayList<>();
+    public List<String> randomiseQuestions(String[] questions){
+        List<String> randomisedQuestions = new ArrayList<>();
 
-        questions.add("Never have I ever cried on a night out");
-        questions.add("Never have I ever had a boyfriend");
-        questions.add("Never have I ever had a girlfriend");
-        questions.add("Never have I ever had sex");
-        questions.add("Never have I ever had a threesome");
+        for (int i = 0; i < questions.length; i++){
+            randomisedQuestions.add(questions[i]);
+        }
 
-        return questions;
+        return randomisedQuestions;
     }
 
 }

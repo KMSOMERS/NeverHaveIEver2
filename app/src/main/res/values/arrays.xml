@@ -13,4 +13,37 @@
         <item>#FFD54F</item>
         <item>#F06292</item>
     </string-array>
+
+    <string-array name="category_sex_and_relationshps">
+        <item>Never have I ever had a boyfriend</item>
+        <item>Never have I ever had a girlfriend</item>
+        <item>Never have I ever had sex</item>
+        <item>Never have I ever had a threesome</item>
+        <item>Never have I ever had a boyfriend</item>
+    </string-array>
+
+    <string-array name="category_animals">
+        <item>Never have I ever owned a cat</item>
+        <item>Never have I ever owned a dog</item>
+        <item>Never have I ever owned a fish</item>
+        <item>Never have I ever owned a rabbit</item>
+        <item>Never have I ever been scared by a dog</item>
+    </string-array>
+
+    <string-array name="category_drinking">
+        <item>Never have I ever passed out from drinking</item>
+        <item>Never have I ever cried on a night out</item>
+        <item>Never have I ever drank beer</item>
+        <item>Never have I ever drank tequila</item>
+        <item>Never have I ever been sick from drinking</item>
+    </string-array>
+
+    <string-array name="category_family">
+        <item>Never have I ever had a brother</item>
+        <item>Never have I ever had a sister</item>
+        <item>Never have I ever had known my dad</item>
+        <item>Never have I ever had known my real parents</item>
+        <item>Never have I ever been to a family wedding</item>
+    </string-array>
+
 </resources>
