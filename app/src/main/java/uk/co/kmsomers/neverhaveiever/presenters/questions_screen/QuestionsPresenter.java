@@ -5,6 +5,8 @@ import java.util.List;
 import uk.co.kmsomers.neverhaveiever.models.QuestionsModel;
 import uk.co.kmsomers.neverhaveiever.views.questions_screen.QuestionsI;
 
+import static android.R.attr.category;
+
 /**
  * Created by kizer on 26/07/2017.
  */
@@ -19,8 +21,8 @@ public class QuestionsPresenter {
         model = new QuestionsModel();
     }
 
-    public List<String> getQuestions(String category){
-        return model.getQuestions(category);
+    public List<String> randomiseQuestions(String[] questions){
+        return model.randomiseQuestions(questions);
     }
 
 }

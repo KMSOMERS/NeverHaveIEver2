@@ -3,6 +3,7 @@ package uk.co.kmsomers.neverhaveiever.views.questions_screen;
 import android.graphics.drawable.ColorDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.content.res.TypedArrayUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import butterknife.OnClick;
 import uk.co.kmsomers.neverhaveiever.R;
 import uk.co.kmsomers.neverhaveiever.core.AppConstants;
 import uk.co.kmsomers.neverhaveiever.presenters.questions_screen.QuestionsPresenter;
+import uk.co.kmsomers.neverhaveiever.utils.CommonUtils;
 import uk.co.kmsomers.neverhaveiever.utils.FadingTextView;
 import uk.co.kmsomers.neverhaveiever.views.dialogs.InstructionsDialogFragment;
 
@@ -66,7 +68,10 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
         }
 
         presenter = new QuestionsPresenter(this);
-        questions = presenter.getQuestions("test");
+
+        String[] questionsArray = getQuestionsArray(category);
+
+        questions = presenter.randomiseQuestions(questionsArray);
         tvQuestion.setText(questions.get(questionPosition));
         tvQuestion.show();
         tvQuestion.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +144,26 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
             case AppConstants.CATEGORY_RANDOM:
                 ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_question, null));
                 break;
+        }
+    }
+
+    private String[] getQuestionsArray(String category){
+        switch (category){
+            case AppConstants.CATEGORY_SEX_AND_RELATIONSHIPS:
+                return getResources().getStringArray(R.array.category_sex_and_relationshps);
+            case AppConstants.CATEGORY_DRINKING:
+                return getResources().getStringArray(R.array.category_drinking);
+            case AppConstants.CATEGORY_ANIMALS:
+                return getResources().getStringArray(R.array.category_animals);
+            case AppConstants.CATEGORY_FAMILY:
+                return getResources().getStringArray(R.array.category_family);
+            case AppConstants.CATEGORY_RANDOM:
+                String[] sexAndRelationshipsQuestions = getResources().getStringArray(R.array.category_sex_and_relationshps);
+                String[] drinkingQuestions = getResources().getStringArray(R.array.category_drinking);
+                String[] animalsQuestions = getResources().getStringArray(R.array.category_animals);
+                String[] familyQuestions = getResources().getStringArray(R.array.category_family);
+                return CommonUtils.concatenate(CommonUtils.concatenate(sexAndRelationshipsQuestions, drinkingQuestions), CommonUtils.concatenate(animalsQuestions, familyQuestions));
+            default: return new String[0];
         }
     }
 
