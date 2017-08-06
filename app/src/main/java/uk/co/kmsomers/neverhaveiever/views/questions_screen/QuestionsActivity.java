@@ -21,6 +21,7 @@ import uk.co.kmsomers.neverhaveiever.R;
 import uk.co.kmsomers.neverhaveiever.core.AppConstants;
 import uk.co.kmsomers.neverhaveiever.presenters.questions_screen.QuestionsPresenter;
 import uk.co.kmsomers.neverhaveiever.utils.FadingTextView;
+import uk.co.kmsomers.neverhaveiever.views.dialogs.InstructionsDialogFragment;
 
 public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
 
@@ -33,6 +34,8 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
 
     private QuestionsPresenter presenter;
 
+    @BindView(R.id.ivInstructions)
+    ImageView ivInstructions;
     @BindView(R.id.clBackground)
     ConstraintLayout clBackground;
     @BindView(R.id.ivCategoryIcon)
@@ -143,5 +146,12 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
         questionPosition = (questionPosition + 1) % questions.size();
         tvQuestion.show();
         tvQuestion.setText(questions.get(questionPosition));
+    }
+
+    @OnClick(R.id.ivInstructions)
+    public void showInstructionsDialog(){
+        InstructionsDialogFragment instructionsDialog = InstructionsDialogFragment.getInstance();
+
+        instructionsDialog.show(getSupportFragmentManager(), "Instructions Dialog");
     }
 }

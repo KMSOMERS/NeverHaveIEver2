@@ -8,6 +8,12 @@
     android:layout_height="match_parent"
     tools:context="uk.co.kmsomers.neverhaveiever.views.questions_screen.QuestionsActivity">
 
+    <ImageView
+        android:id="@+id/ivInstructions"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_help"/>
+
     <LinearLayout
         android:id="@+id/llIconTitle"
         android:layout_width="wrap_content"
