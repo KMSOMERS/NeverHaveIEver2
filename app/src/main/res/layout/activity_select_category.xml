@@ -80,6 +80,7 @@
         android:id="@+id/grav"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:padding="-8dp"
         app:pointGenerator="com.github.glomadrian.grav.generator.point.CircularPointGenerator"
         app:regular_cell_size="200"
         app:regular_variance="200"
