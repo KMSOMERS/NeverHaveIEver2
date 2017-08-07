@@ -14,6 +14,6 @@
 
     <string name="instructions_title">Instructions</string>
 
-    <string name="quiz_instructions"><b>How to play:</b> All players hold up three fingers. After each question if the question applies to the player they lose a finger. After a player has no fingers remaining they have lost and must drink for 3 seconds. <b>Alernatively</b>: Take it in turns to read out questions and everyone drink if the questions applies to them.N</string>
+    <string name="quiz_instructions"><b>How to play:</b> All players hold up three fingers. After each question if the question applies to the player they lose a finger. After a player has no fingers remaining they have lost and must drink for 3 seconds. <b>Alernatively</b>: Take it in turns to read out questions and drink if the question applies.</string>
 
 </resources>
