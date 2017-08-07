@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.google.android.gms.ads.MobileAds;
+
 import uk.co.kmsomers.neverhaveiever.R;
 import uk.co.kmsomers.neverhaveiever.views.category_select.CategorySelectActivity;
 
@@ -17,6 +19,8 @@ public class StartupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
+
+        MobileAds.initialize(this, "ca-app-pub-2300350619946630~2150317900");
 
         startActivity(new Intent(StartupActivity.this, CategorySelectActivity.class));
         finish();

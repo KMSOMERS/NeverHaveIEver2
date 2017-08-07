@@ -16,6 +16,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.List;
 import java.util.Locale;
 
@@ -56,6 +59,8 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
     Button btnNext;
     @BindView(R.id.btnQuit)
     Button btnQuit;
+    @BindView(R.id.avQuestions)
+    AdView avQuestions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +115,9 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
         });
 
         speakQuestion(questions.get(questionPosition));
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        avQuestions.loadAd(adRequest);
     }
 
     @Override

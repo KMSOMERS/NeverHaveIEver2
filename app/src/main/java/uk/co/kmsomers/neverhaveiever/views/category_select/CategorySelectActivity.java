@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
@@ -28,6 +31,7 @@ public class CategorySelectActivity extends AppCompatActivity {
     @BindView(R.id.btnAnimals) Button btnAnimals;
     @BindView(R.id.btnFamily) Button btnFamily;
     @BindView(R.id.btnRandom) Button btnRandom;
+    @BindView(R.id.avCategory) AdView avCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +70,9 @@ public class CategorySelectActivity extends AppCompatActivity {
         btnAnimals.setOnClickListener(categoryButtonListener);
         btnFamily.setOnClickListener(categoryButtonListener);
         btnRandom.setOnClickListener(categoryButtonListener);
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        avCategory.loadAd(adRequest);
     }
 
     @Override
