@@ -1,6 +1,9 @@
 package uk.co.kmsomers.neverhaveiever.views.questions_screen;
 
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.speech.tts.TextToSpeech;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.content.res.TypedArrayUtils;
@@ -14,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +27,7 @@ import uk.co.kmsomers.neverhaveiever.core.AppConstants;
 import uk.co.kmsomers.neverhaveiever.presenters.questions_screen.QuestionsPresenter;
 import uk.co.kmsomers.neverhaveiever.utils.CommonUtils;
 import uk.co.kmsomers.neverhaveiever.utils.FadingTextView;
+import uk.co.kmsomers.neverhaveiever.views.dialogs.InstructionsDialogFragment;
 
 public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
 
@@ -35,6 +40,10 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
 
     private QuestionsPresenter presenter;
 
+    private TextToSpeech textToSpeech;
+
+    @BindView(R.id.ivInstructions)
+    ImageView ivInstructions;
     @BindView(R.id.clBackground)
     ConstraintLayout clBackground;
     @BindView(R.id.ivCategoryIcon)
@@ -92,10 +101,20 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
                 onBackPressed();
             }
         });
+
+        textToSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                textToSpeech.setLanguage(Locale.UK);
+            }
+        });
+
+        speakQuestion(questions.get(questionPosition));
     }
 
     @Override
     public void setupCategoryColours(String category) {
+
         switch (category){
             case AppConstants.CATEGORY_SEX_AND_RELATIONSHIPS:
                 setBackgroundColours(R.color.material_pink_300, R.color.material_pink_500 ,R.color.material_pink_700);
@@ -121,6 +140,14 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
         btnNext.setBackgroundResource(textColour);
         btnQuit.setBackgroundResource(textColour);
         window.setStatusBarColor(ResourcesCompat.getColor(getResources(), statusBar, null));
+
+        //Consider moving to new method
+        Drawable instructionsIcon = getDrawable(R.drawable.ic_help);
+        instructionsIcon.setTint(ResourcesCompat.getColor(getResources(), textColour, null));
+        ivInstructions.setImageDrawable(instructionsIcon);
+
+        SharedPreferences sharedPreferences = getSharedPreferences(AppConstants.SHARED_PREFERENCES, MODE_PRIVATE);
+        sharedPreferences.edit().putInt(AppConstants.SHARED_PREFERENCES_STATUS_COLOUR, statusBar).apply();
     }
 
     private void setCategoryIcon(String category){
@@ -168,5 +195,16 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
         questionPosition = (questionPosition + 1) % questions.size();
         tvQuestion.show();
         tvQuestion.setText(questions.get(questionPosition));
+        speakQuestion(questions.get(questionPosition));
+    }
+
+    private void speakQuestion(String question){
+        textToSpeech.speak(question, TextToSpeech.QUEUE_FLUSH, null, null);
+    }
+
+    @OnClick(R.id.ivInstructions)
+    public void showInstructionsDialog(){
+        InstructionsDialogFragment instructionsDialog = InstructionsDialogFragment.getInstance();
+        instructionsDialog.show(getSupportFragmentManager(), "Instructions Dialog");
     }
 }

@@ -1,7 +1,9 @@
 package uk.co.kmsomers.neverhaveiever.views.category_select;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -64,6 +66,14 @@ public class CategorySelectActivity extends AppCompatActivity {
         btnAnimals.setOnClickListener(categoryButtonListener);
         btnFamily.setOnClickListener(categoryButtonListener);
         btnRandom.setOnClickListener(categoryButtonListener);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences = getSharedPreferences(AppConstants.SHARED_PREFERENCES, MODE_PRIVATE);
+        int statusBarColour = ResourcesCompat.getColor(getResources(), sharedPreferences.getInt(AppConstants.SHARED_PREFERENCES_STATUS_COLOUR, R.color.material_pink_700), null);
+        getWindow().setStatusBarColor(statusBarColour);
     }
 
     private void openQuestionsScreen(String category){
