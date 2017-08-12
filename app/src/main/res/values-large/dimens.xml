@@ -9,7 +9,12 @@
 
     <dimen name="questions_margin">48dp</dimen>
 
-    <dimen name="category_button_margin_size">64dp</dimen>
-    <dimen name="category_button_height_size">48dp</dimen>
+    <dimen name="instructions_icon_size">48dp</dimen>
+
+    <dimen name="question_icon_size">280dp</dimen>
+    <dimen name="fading_textview_size">300dp</dimen>
+
+    <dimen name="category_button_margin_size">128dp</dimen>
+    <dimen name="category_button_height_size">96dp</dimen>
 
 </resources>

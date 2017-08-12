@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.List;
 import java.util.Locale;
@@ -139,6 +140,9 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
             case AppConstants.CATEGORY_RANDOM:
                 setBackgroundColours(R.color.material_amber_300, R.color.material_amber_500, R.color.material_amber_700);
                 break;
+            case AppConstants.CATEGORY_WEIRD:
+                setBackgroundColours(R.color.material_cyan_300, R.color.material_cyan_500, R.color.material_cyan_700);
+                break;
         }
     }
 
@@ -164,6 +168,9 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
             case AppConstants.CATEGORY_SEX_AND_RELATIONSHIPS:
                 ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_heart, null));
                 break;
+            case AppConstants.CATEGORY_WEIRD:
+                ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_weird, null));
+                break;
             case AppConstants.CATEGORY_DRINKING:
                 ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_beer, null));
                 break;
@@ -171,7 +178,7 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
                 ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_animal, null));
                 break;
             case AppConstants.CATEGORY_FAMILY:
-                ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_family, null));
+                ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_house, null));
                 break;
             case AppConstants.CATEGORY_RANDOM:
                 ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_question, null));
@@ -189,6 +196,8 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
                 return getResources().getStringArray(R.array.category_animals);
             case AppConstants.CATEGORY_FAMILY:
                 return getResources().getStringArray(R.array.category_family);
+            case AppConstants.CATEGORY_WEIRD:
+                return getResources().getStringArray(R.array.categorry_weird);
             case AppConstants.CATEGORY_RANDOM:
                 String[] sexAndRelationshipsQuestions = getResources().getStringArray(R.array.category_sex_and_relationshps);
                 String[] drinkingQuestions = getResources().getStringArray(R.array.category_drinking);

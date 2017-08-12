@@ -27,6 +27,7 @@ public class CategorySelectActivity extends AppCompatActivity {
 
     @BindView(R.id.tvAppTitle) TextView tvTitle;
     @BindView(R.id.btnSexAndRelationships) Button btnSexAndRelationships;
+    @BindView(R.id.btnWeird) Button btnWeird;
     @BindView(R.id.btnDrinking) Button btnDrinking;
     @BindView(R.id.btnAnimals) Button btnAnimals;
     @BindView(R.id.btnFamily) Button btnFamily;
@@ -49,6 +50,9 @@ public class CategorySelectActivity extends AppCompatActivity {
                     case R.id.btnSexAndRelationships:
                         openQuestionsScreen(AppConstants.CATEGORY_SEX_AND_RELATIONSHIPS);
                         break;
+                    case R.id.btnWeird:
+                        openQuestionsScreen(AppConstants.CATEGORY_WEIRD);
+                        break;
                     case R.id.btnDrinking:
                         openQuestionsScreen(AppConstants.CATEGORY_DRINKING);
                         break;
@@ -70,6 +74,7 @@ public class CategorySelectActivity extends AppCompatActivity {
         btnAnimals.setOnClickListener(categoryButtonListener);
         btnFamily.setOnClickListener(categoryButtonListener);
         btnRandom.setOnClickListener(categoryButtonListener);
+        btnWeird.setOnClickListener(categoryButtonListener);
 
         AdRequest adRequest = new AdRequest.Builder().build();
         avCategory.loadAd(adRequest);
