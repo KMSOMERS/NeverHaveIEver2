@@ -29,8 +29,7 @@ public class CategorySelectActivity extends AppCompatActivity {
     @BindView(R.id.btnSexAndRelationships) Button btnSexAndRelationships;
     @BindView(R.id.btnWeird) Button btnWeird;
     @BindView(R.id.btnDrinking) Button btnDrinking;
-    @BindView(R.id.btnAnimals) Button btnAnimals;
-    @BindView(R.id.btnFamily) Button btnFamily;
+    @BindView(R.id.btnWorkAndSchool) Button btnWorkAndSchool;
     @BindView(R.id.btnRandom) Button btnRandom;
     @BindView(R.id.avCategory) AdView avCategory;
 
@@ -50,17 +49,14 @@ public class CategorySelectActivity extends AppCompatActivity {
                     case R.id.btnSexAndRelationships:
                         openQuestionsScreen(AppConstants.CATEGORY_SEX_AND_RELATIONSHIPS);
                         break;
+                    case R.id.btnWorkAndSchool:
+                        openQuestionsScreen(AppConstants.CATEGORY_WORK_AND_SCHOOL);
+                        break;
                     case R.id.btnWeird:
                         openQuestionsScreen(AppConstants.CATEGORY_WEIRD);
                         break;
                     case R.id.btnDrinking:
                         openQuestionsScreen(AppConstants.CATEGORY_DRINKING);
-                        break;
-                    case R.id.btnAnimals:
-                        openQuestionsScreen(AppConstants.CATEGORY_ANIMALS);
-                        break;
-                    case R.id.btnFamily:
-                        openQuestionsScreen(AppConstants.CATEGORY_FAMILY);
                         break;
                     case R.id.btnRandom:
                         openQuestionsScreen(AppConstants.CATEGORY_RANDOM);
@@ -71,8 +67,7 @@ public class CategorySelectActivity extends AppCompatActivity {
 
         btnSexAndRelationships.setOnClickListener(categoryButtonListener);
         btnDrinking.setOnClickListener(categoryButtonListener);
-        btnAnimals.setOnClickListener(categoryButtonListener);
-        btnFamily.setOnClickListener(categoryButtonListener);
+        btnWorkAndSchool.setOnClickListener(categoryButtonListener);
         btnRandom.setOnClickListener(categoryButtonListener);
         btnWeird.setOnClickListener(categoryButtonListener);
 

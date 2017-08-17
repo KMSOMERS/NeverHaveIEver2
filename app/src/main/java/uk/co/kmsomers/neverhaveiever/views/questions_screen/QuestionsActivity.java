@@ -1,12 +1,10 @@
 package uk.co.kmsomers.neverhaveiever.views.questions_screen;
 
 import android.content.SharedPreferences;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.speech.tts.TextToSpeech;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.res.ResourcesCompat;
-import android.support.v4.content.res.TypedArrayUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +16,6 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.List;
 import java.util.Locale;
@@ -84,7 +81,7 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
         String[] questionsArray = getQuestionsArray(category);
 
         questions = presenter.randomiseQuestions(questionsArray);
-        tvQuestion.setText(questions.get(questionPosition));
+        tvQuestion.setText(getString(R.string.never_have_I_ever) + " " + questions.get(questionPosition));
         tvQuestion.show();
         tvQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,17 +128,14 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
             case AppConstants.CATEGORY_DRINKING:
                 setBackgroundColours(R.color.material_light_green_300, R.color.material_light_green_500, R.color.material_light_green_700);
                 break;
-            case AppConstants.CATEGORY_ANIMALS:
+            case AppConstants.CATEGORY_WEIRD:
                 setBackgroundColours(R.color.material_deep_purple_300, R.color.material_deep_purple_500, R.color.material_deep_purple_700);
                 break;
-            case AppConstants.CATEGORY_FAMILY:
+            case AppConstants.CATEGORY_WORK_AND_SCHOOL:
                 setBackgroundColours(R.color.material_blue_300, R.color.material_blue_500, R.color.material_blue_700);
                 break;
             case AppConstants.CATEGORY_RANDOM:
                 setBackgroundColours(R.color.material_amber_300, R.color.material_amber_500, R.color.material_amber_700);
-                break;
-            case AppConstants.CATEGORY_WEIRD:
-                setBackgroundColours(R.color.material_cyan_300, R.color.material_cyan_500, R.color.material_cyan_700);
                 break;
         }
     }
@@ -168,17 +162,14 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
             case AppConstants.CATEGORY_SEX_AND_RELATIONSHIPS:
                 ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_heart, null));
                 break;
-            case AppConstants.CATEGORY_WEIRD:
-                ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_weird, null));
-                break;
             case AppConstants.CATEGORY_DRINKING:
                 ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_beer, null));
                 break;
-            case AppConstants.CATEGORY_ANIMALS:
-                ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_animal, null));
+            case AppConstants.CATEGORY_WEIRD:
+                ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_weird, null));
                 break;
-            case AppConstants.CATEGORY_FAMILY:
-                ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_house, null));
+            case AppConstants.CATEGORY_WORK_AND_SCHOOL:
+                ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_school, null));
                 break;
             case AppConstants.CATEGORY_RANDOM:
                 ivCategoryIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_question, null));
@@ -192,17 +183,15 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
                 return getResources().getStringArray(R.array.category_sex_and_relationshps);
             case AppConstants.CATEGORY_DRINKING:
                 return getResources().getStringArray(R.array.category_drinking);
-            case AppConstants.CATEGORY_ANIMALS:
-                return getResources().getStringArray(R.array.category_animals);
-            case AppConstants.CATEGORY_FAMILY:
-                return getResources().getStringArray(R.array.category_family);
+            case AppConstants.CATEGORY_WORK_AND_SCHOOL:
+                return getResources().getStringArray(R.array.category_work_and_school);
             case AppConstants.CATEGORY_WEIRD:
-                return getResources().getStringArray(R.array.categorry_weird);
+                return getResources().getStringArray(R.array.category_weird);
             case AppConstants.CATEGORY_RANDOM:
                 String[] sexAndRelationshipsQuestions = getResources().getStringArray(R.array.category_sex_and_relationshps);
                 String[] drinkingQuestions = getResources().getStringArray(R.array.category_drinking);
-                String[] animalsQuestions = getResources().getStringArray(R.array.category_animals);
-                String[] familyQuestions = getResources().getStringArray(R.array.category_family);
+                String[] animalsQuestions = getResources().getStringArray(R.array.category_work_and_school);
+                String[] familyQuestions = getResources().getStringArray(R.array.category_weird);
                 return CommonUtils.concatenate(CommonUtils.concatenate(sexAndRelationshipsQuestions, drinkingQuestions), CommonUtils.concatenate(animalsQuestions, familyQuestions));
             default: return new String[0];
         }
@@ -211,7 +200,7 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
     private void setNextQuestion(){
         questionPosition = (questionPosition + 1) % questions.size();
         tvQuestion.show();
-        tvQuestion.setText(questions.get(questionPosition));
+        tvQuestion.setText(getString(R.string.never_have_I_ever) + " " + questions.get(questionPosition));
         speakQuestion(questions.get(questionPosition));
     }
 

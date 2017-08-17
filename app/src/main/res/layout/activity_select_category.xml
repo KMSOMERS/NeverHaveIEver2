@@ -43,6 +43,17 @@
             style="@style/Widget.AppCompat.Button.Colored"/>
 
         <Button
+            android:id="@+id/btnWorkAndSchool"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/category_button_height_size"
+            android:layout_marginStart="@dimen/category_button_margin_size"
+            android:layout_marginEnd="@dimen/category_button_margin_size"
+            android:layout_marginBottom="8dp"
+            android:text="@string/category_work_and_school"
+            android:background="@color/material_blue_500"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <Button
             android:id="@+id/btnWeird"
             android:layout_width="match_parent"
             android:layout_height="@dimen/category_button_height_size"
@@ -50,7 +61,7 @@
             android:layout_marginEnd="@dimen/category_button_margin_size"
             android:layout_marginBottom="8dp"
             android:text="@string/category_weird"
-            android:background="@color/material_cyan_500"
+            android:background="@color/material_deep_purple_500"
             style="@style/Widget.AppCompat.Button.Colored"/>
 
         <Button
@@ -62,28 +73,6 @@
             android:layout_marginBottom="8dp"
             android:text="@string/category_drinking"
             android:background="@color/material_light_green_500"
-            style="@style/Widget.AppCompat.Button.Colored"/>
-
-        <Button
-            android:id="@+id/btnAnimals"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/category_button_height_size"
-            android:layout_marginStart="@dimen/category_button_margin_size"
-            android:layout_marginEnd="@dimen/category_button_margin_size"
-            android:layout_marginBottom="8dp"
-            android:text="@string/category_animals"
-            android:background="@color/material_deep_purple_500"
-            style="@style/Widget.AppCompat.Button.Colored"/>
-
-        <Button
-            android:id="@+id/btnFamily"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/category_button_height_size"
-            android:layout_marginStart="@dimen/category_button_margin_size"
-            android:layout_marginEnd="@dimen/category_button_margin_size"
-            android:layout_marginBottom="8dp"
-            android:text="@string/category_family"
-            android:background="@color/material_blue_500"
             style="@style/Widget.AppCompat.Button.Colored"/>
 
         <Button
