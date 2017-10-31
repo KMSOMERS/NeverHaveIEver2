@@ -326,6 +326,8 @@
         <item>finished in the same condom more than once</item>
         <item>masturbated while lying next to my sleeping partner</item>
         <item>wanted to have sex with someone playing this game right now</item>
+        <item>had more than 10 sexual partners</item>
+        <item>had sex with someone in this room</item>
         <!--RELATIONSHIP SECTION INCASE YOU WANT TO SPLIT THIS-->
         <item>advised someone to leave their partner</item>
         <item>been dumped</item>
@@ -398,10 +400,18 @@
         <item>slept with a celebrity</item>
         <item>been denied a kiss on a first date</item>
         <item>been denied a kiss</item>
+        <item>sent nudes</item>
+        <item>received nudes</item>
+        <item>flirted with a person to win a bet</item>
+        <item>fantasized about my friend's significant other</item>
+        <item>slept with my boss to get ahead, or with a teacher to get a good grade</item>
     </string-array>
 
     <string-array name="category_drinking">
         <item>passed out from drinking</item>
+        <item>passed out on a toilet</item>
+        <item>chugged a beer in less than 10 seconds</item>
+        <item>chugged a beer in less than 10 seconds and then puked</item>
         <item>cried on a night out</item>
         <item>drank beer</item>
         <item>asked someone to buy me alcohol when underage</item>
