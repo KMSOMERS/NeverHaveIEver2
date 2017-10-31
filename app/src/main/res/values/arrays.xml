@@ -596,7 +596,10 @@
     <string-array name="category_weird">
         <item>punched a wall</item>
         <item>juggled</item>
+        <item>broken a mobile phone</item>
+        <item>lost a mobile phone</item>
         <item>been in a food fight</item>
+        <item>eaten fruit</item>
         <item>hung upside down from monkey bars</item>
         <item>urinated in a drink before giving it to someone</item>
         <item>eaten earwax</item>
