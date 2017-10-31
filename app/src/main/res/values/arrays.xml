@@ -592,6 +592,7 @@
         <item>performed in a school play</item>
         <item>eaten food from a customers plate after they left</item>
         <item>worn the same clothes to work or school two days in a row</item>
+        <item>flipped a desk</item>
     </string-array>
 
     <string-array name="category_weird">
@@ -608,6 +609,7 @@
         <item>been humped by a dog</item>
         <item>seen two girls one cup</item>
         <item>been attracted to a family member</item>
+        <item>been stuck in an elevator</item>
     </string-array>
 
 </resources>
