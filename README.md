@@ -1,3 +1,5 @@
-# Neve rHave I Ever
+# Never Have I Ever
 
-Android Quiz App
+Android Quiz App written using the MVP architecture
+
+Five categories of questions
