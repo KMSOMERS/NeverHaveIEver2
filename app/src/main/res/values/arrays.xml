@@ -592,6 +592,8 @@
         <item>performed in a school play</item>
         <item>eaten food from a customers plate after they left</item>
         <item>worn the same clothes to work or school two days in a row</item>
+	<item>humped a teacher</item>
+	<item>stolen someone\'s homework</item>
     </string-array>
 
     <string-array name="category_weird">
