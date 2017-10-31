@@ -496,7 +496,11 @@
         <item>given away a secret while drunk</item>
         <item>played a drinking game</item>
         <item>been sick from drinking</item>
-        <item>drank so much that I fell asleep while having sex</item>
+	<item>drank so much that I fell asleep while having sex</item>
+    	<item>drinking on an empty stomach</item>
+	<item>Drink alone</item>
+	<item>Talked to anyone drunk</item>
+	<item>drink whiskey like water</item>
     </string-array>
 
     <string-array name="category_work_and_school">
@@ -593,6 +597,8 @@
         <item>eaten food from a customers plate after they left</item>
         <item>worn the same clothes to work or school two days in a row</item>
         <item>flipped a desk</item>
+	<item>taken picture of blackboard</item>
+	<item>play ball of paper</item>
     </string-array>
 
     <string-array name="category_weird">
@@ -610,6 +616,8 @@
         <item>seen two girls one cup</item>
         <item>been attracted to a family member</item>
         <item>been stuck in an elevator</item>
+    	<item>lose glasses on the beach</item>
+	<item></item>
     </string-array>
 
 </resources>
