@@ -165,6 +165,7 @@
         <item>spanked someone older than me</item>
         <item>slept with someone older than me</item>
         <item>dated someone older than me</item>
+        <item>dated someone ten years older than me</item>
         <item>slept with someone younger than me</item>
         <item>dated someone younger than me</item>
         <item>slept with someone so that they would buy me things</item>
@@ -550,6 +551,7 @@
         <item>regretted a career decision</item>
         <item>had a job</item>
         <item>slept at work</item>
+        <item>slept at school</item>
         <item>ignored a social media request from a coworker</item>
         <item>failed an test</item>
         <item>cheated on a test</item>
@@ -585,6 +587,7 @@
         <item>gotten into a fight at school</item>
         <item>cried at work or school</item>
         <item>spoken a foreign language</item>
+        <item>pretended I didn't understand a foreign language</item>
         <item>copied homework or an assignment from the internet</item>
         <item>had someone else take an exam for me</item>
         <item>insulted a teacher or coworker</item>
