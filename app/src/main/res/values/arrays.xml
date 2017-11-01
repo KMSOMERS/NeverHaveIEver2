@@ -165,9 +165,7 @@
         <item>had sex with someone that I didn\'t know the name of</item>
         <item>spanked someone older than me</item>
         <item>slept with someone older than me</item>
-        <item>dated someone older than me</item>
         <item>slept with someone younger than me</item>
-        <item>dated someone younger than me</item>
         <item>slept with someone so that they would buy me things</item>
         <item>had sex on my period</item>
         <item>had sex with someone on their period</item>
@@ -331,6 +329,9 @@
         <item>had sex with someone in this room</item>
 	      <item>been asked to do streaptease for money after an office party you don't recall anything from</item>    
         <!--RELATIONSHIP SECTION INCASE YOU WANT TO SPLIT THIS-->
+        <item>dated someone older than me</item>
+        <item>dated someone ten years older than me</item>
+        <item>dated someone younger than me</item>
         <item>advised someone to leave their partner</item>
         <item>been dumped</item>
         <item>flirted with someone just to turn them on</item>
@@ -566,6 +567,7 @@
         <item>regretted a career decision</item>
         <item>had a job</item>
         <item>slept at work</item>
+        <item>slept at school</item>
         <item>ignored a social media request from a coworker</item>
         <item>failed an test</item>
         <item>cheated on a test</item>
@@ -601,6 +603,8 @@
         <item>gotten into a fight at school</item>
         <item>cried at work or school</item>
         <item>spoken a foreign language</item>
+        <item>pretended I didn't understand a foreign language</item>
+        <item>acted like I fluently speak a foreign language</item>
         <item>copied homework or an assignment from the internet</item>
         <item>had someone else take an exam for me</item>
         <item>insulted a teacher or coworker</item>
