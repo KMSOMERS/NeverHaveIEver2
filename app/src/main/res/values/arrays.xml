@@ -164,10 +164,7 @@
         <item>had sex with someone that I didn\'t know the name of</item>
         <item>spanked someone older than me</item>
         <item>slept with someone older than me</item>
-        <item>dated someone older than me</item>
-        <item>dated someone ten years older than me</item>
         <item>slept with someone younger than me</item>
-        <item>dated someone younger than me</item>
         <item>slept with someone so that they would buy me things</item>
         <item>had sex on my period</item>
         <item>had sex with someone on their period</item>
@@ -328,6 +325,9 @@
         <item>masturbated while lying next to my sleeping partner</item>
         <item>wanted to have sex with someone playing this game right now</item>
         <!--RELATIONSHIP SECTION INCASE YOU WANT TO SPLIT THIS-->
+        <item>dated someone older than me</item>
+        <item>dated someone ten years older than me</item>
+        <item>dated someone younger than me</item>
         <item>advised someone to leave their partner</item>
         <item>been dumped</item>
         <item>flirted with someone just to turn them on</item>
