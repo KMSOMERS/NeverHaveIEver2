@@ -1,11 +1,6 @@
-package uk.co.kmsomers.neverhaveiever.presenters.questions_screen;
+package uk.co.kmsomers.neverhaveiever.questions_screen;
 
 import java.util.List;
-
-import uk.co.kmsomers.neverhaveiever.models.QuestionsModel;
-import uk.co.kmsomers.neverhaveiever.views.questions_screen.QuestionsI;
-
-import static android.R.attr.category;
 
 /**
  * Created by kizer on 26/07/2017.

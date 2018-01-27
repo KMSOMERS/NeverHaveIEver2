@@ -1,4 +1,4 @@
-package uk.co.kmsomers.neverhaveiever.views.questions_screen;
+package uk.co.kmsomers.neverhaveiever.questions_screen;
 
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
@@ -25,10 +25,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import uk.co.kmsomers.neverhaveiever.R;
 import uk.co.kmsomers.neverhaveiever.core.AppConstants;
-import uk.co.kmsomers.neverhaveiever.presenters.questions_screen.QuestionsPresenter;
 import uk.co.kmsomers.neverhaveiever.utils.CommonUtils;
-import uk.co.kmsomers.neverhaveiever.utils.FadingTextView;
-import uk.co.kmsomers.neverhaveiever.views.dialogs.InstructionsDialogFragment;
+import uk.co.kmsomers.neverhaveiever.custom_views.FadingTextView;
+import uk.co.kmsomers.neverhaveiever.dialogs.InstructionsDialogFragment;
 
 public class QuestionsActivity extends AppCompatActivity implements QuestionsI{
 

@@ -1,4 +1,4 @@
-package uk.co.kmsomers.neverhaveiever.utils;
+package uk.co.kmsomers.neverhaveiever.custom_views;
 
 /**
  * Created by kizer on 27/07/2017.

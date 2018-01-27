@@ -1,4 +1,4 @@
-package uk.co.kmsomers.neverhaveiever.models;
+package uk.co.kmsomers.neverhaveiever.questions_screen;
 
 import java.util.ArrayList;
 import java.util.List;

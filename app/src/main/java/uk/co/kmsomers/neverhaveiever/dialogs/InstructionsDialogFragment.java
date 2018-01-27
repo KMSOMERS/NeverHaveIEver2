@@ -1,4 +1,4 @@
-package uk.co.kmsomers.neverhaveiever.views.dialogs;
+package uk.co.kmsomers.neverhaveiever.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

@@ -1,4 +1,4 @@
-package uk.co.kmsomers.neverhaveiever.views.category_select;
+package uk.co.kmsomers.neverhaveiever.category_select_screen;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,12 +14,10 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import butterknife.BindView;
-import butterknife.BindViews;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import uk.co.kmsomers.neverhaveiever.R;
 import uk.co.kmsomers.neverhaveiever.core.AppConstants;
-import uk.co.kmsomers.neverhaveiever.views.questions_screen.QuestionsActivity;
+import uk.co.kmsomers.neverhaveiever.questions_screen.QuestionsActivity;
 
 import static uk.co.kmsomers.neverhaveiever.core.AppConstants.CATEGORY_INTENT;
 

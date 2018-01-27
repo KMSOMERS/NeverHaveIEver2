@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="uk.co.kmsomers.neverhaveiever.views.questions_screen.QuestionsActivity">
+    tools:context="uk.co.kmsomers.neverhaveiever.questions_screen.QuestionsActivity">
 
     <ImageView
         android:id="@+id/ivInstructions"
@@ -44,7 +44,7 @@
 
     </LinearLayout>
 
-    <uk.co.kmsomers.neverhaveiever.utils.FadingTextView
+    <uk.co.kmsomers.neverhaveiever.custom_views.FadingTextView
         android:id="@+id/tvQuestion"
         android:layout_width="@dimen/fading_textview_size"
         android:layout_height="wrap_content"

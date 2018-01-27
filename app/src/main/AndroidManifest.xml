@@ -16,10 +16,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.category_select.CategorySelectActivity"
+            android:name=".category_select_screen.CategorySelectActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".views.questions_screen.QuestionsActivity"
+            android:name=".questions_screen.QuestionsActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 

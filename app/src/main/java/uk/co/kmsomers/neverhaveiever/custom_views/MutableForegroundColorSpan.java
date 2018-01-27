@@ -1,4 +1,4 @@
-package uk.co.kmsomers.neverhaveiever.utils;
+package uk.co.kmsomers.neverhaveiever.custom_views;
 
 /**
  * Created by kizer on 27/07/2017.
@@ -11,8 +11,7 @@ import android.text.style.UpdateAppearance;
 /**
  * Created by walfud on 2015/5/29.
  */
-public class MutableForegroundColorSpan extends CharacterStyle
-        implements UpdateAppearance {
+public class MutableForegroundColorSpan extends CharacterStyle implements UpdateAppearance {
 
     public static final String TAG = "MutableForegroundColorSpan";
 

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.google.android.gms.ads.MobileAds;
 
 import uk.co.kmsomers.neverhaveiever.R;
-import uk.co.kmsomers.neverhaveiever.views.category_select.CategorySelectActivity;
+import uk.co.kmsomers.neverhaveiever.category_select_screen.CategorySelectActivity;
 
 /**
  * Start up activity in case I feel a login is needed or potentially for any work that needs to be done
